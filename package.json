@@ -20,7 +20,7 @@
   "scripts": {
     "start": "NODE_ENV=watch node ./build/index.js",
     "build": "NODE_ENV=build node ./build/index.js",
-    "postbuild": "tsc --declaration --emitDeclarationOnly --declarationDir ./bin",
+    "postbuild": "tsc --declaration --emitDeclarationOnly --declarationDir --include ./@types/index.d.ts --outDir ./bin",
     "test": "jest"
   },
   "repository": {
