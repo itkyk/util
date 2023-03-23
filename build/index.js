@@ -22,6 +22,10 @@ const init = async () => {
     console.log("Watching start")
     emsBuilder.watch().then();
     cjsBuilder.watch().then();
+  } else {
+    emsBuilder.rebuild().then();
+    cjsBuilder.rebuild().then();
+    process.exit(0)
   }
 }
 
